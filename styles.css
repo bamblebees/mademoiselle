@@ -1,18 +1,39 @@
 /* IMPORT FONT */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* Place your CSS styles in this file */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
 }
 
 body{
-    background: linear-gradient(135deg,#f8e8ff,#fff7d6);
-    color:#333;
+    font-family:'Quicksand', sans-serif;
+    background:linear-gradient(135deg,#fff0f7,#ffd6e8,#ffe9f3);
+    color:#5a3e4d;
     min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* DEKORASI */
+body::before{
+    content:"🌸";
+    position:fixed;
+    top:10%;
+    left:5%;
+    font-size:60px;
+    opacity:0.15;
+    z-index:-1;
+}
+
+body::after{
+    content:"🦋";
+    position:fixed;
+    bottom:10%;
+    right:5%;
+    font-size:60px;
+    opacity:0.15;
+    z-index:-1;
 }
 
 /* NAVBAR */
@@ -22,56 +43,52 @@ nav{
     justify-content:space-between;
     align-items:center;
     padding:20px 8%;
-    background:rgba(106, 13, 173, 0.95);
-    backdrop-filter:blur(10px);
+    background:#ff8fb1;
     position:sticky;
     top:0;
     z-index:1000;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    box-shadow:0 4px 15px rgba(255,143,177,0.3);
 }
 
 .logo{
-    color:#ffd700;
-    font-size:1.7rem;
+    font-family:'Playfair Display', serif;
+    color:white;
+    font-size:2.2rem;
     font-weight:700;
-}
-
-img {
-     width: 400px;
-     height: 400px;
+    letter-spacing:1px;
 }
 
 nav ul{
     display:flex;
     list-style:none;
-    gap:25px;
+    gap:20px;
 }
 
 nav a{
     text-decoration:none;
     color:white;
-    font-weight:500;
-    transition:0.3s;
-    padding:8px 15px;
+    font-weight:600;
+    padding:8px 16px;
     border-radius:20px;
+    transition:0.3s;
 }
 
 nav a:hover{
-    background:#ffd700;
-    color:#6a0dad;
-    transform:translateY(-2px);
+    background:white;
+    color:#ff8fb1;
 }
 
-/* HERO HOME */
+/* HERO */
 
 .hero{
     text-align:center;
-    padding:80px 10%;
+    padding:100px 10%;
 }
 
 .hero h1{
-    font-size:3.5rem;
-    color:#6a0dad;
+    font-family:'Playfair Display', serif;
+    font-size:4rem;
+    color:#ff5c93;
     margin-bottom:20px;
     animation:fadeDown 1s ease;
 }
@@ -82,22 +99,24 @@ nav a:hover{
     line-height:1.8;
     font-size:1.1rem;
     margin-bottom:30px;
+    color:#6b4c5d;
 }
 
 .hero button{
-    padding:14px 30px;
+    padding:14px 32px;
     border:none;
     border-radius:30px;
-    background:#ffd700;
-    color:#6a0dad;
-    font-weight:bold;
+    background:#ff5c93;
+    color:white;
+    font-weight:700;
     cursor:pointer;
     transition:0.4s;
 }
 
 .hero button:hover{
-    transform:scale(1.08);
-    box-shadow:0 10px 25px rgba(255,215,0,0.4);
+    background:#ff8fb1;
+    transform:scale(1.05);
+    box-shadow:0 10px 25px rgba(255,143,177,0.4);
 }
 
 /* CONTAINER */
@@ -108,9 +127,10 @@ nav a:hover{
 
 .container h2{
     text-align:center;
-    color:#6a0dad;
+    font-family:'Playfair Display', serif;
+    color:#ff5c93;
     margin-bottom:40px;
-    font-size:2rem;
+    font-size:2.3rem;
 }
 
 /* ANGGOTA */
@@ -121,32 +141,34 @@ nav a:hover{
     gap:25px;
 }
 
-/* CARD UMUM */
+/* CARD */
 
 .card{
     background:white;
     padding:25px;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.1);
+    border-radius:25px;
+    box-shadow:0 10px 25px rgba(255,143,177,0.2);
+    border-top:6px solid #ff8fb1;
     transition:0.4s;
-    border-top:5px solid #ffd700;
+    animation:fadeUp 1s ease;
 }
 
 .card:hover{
-    transform:translateY(-10px);
-    box-shadow:0 15px 35px rgba(106,13,173,0.25);
+    transform:translateY(-8px);
+    box-shadow:0 15px 35px rgba(255,143,177,0.35);
 }
 
 .card h3{
-    color:#6a0dad;
+    font-family:'Playfair Display', serif;
+    color:#ff5c93;
     margin-bottom:10px;
 }
 
 .card p{
-    line-height:1.6;
+    line-height:1.7;
 }
 
-/* PAGE Design Process DAN Our Product */
+/* PAGE */
 
 .page{
     padding:70px 10%;
@@ -154,12 +176,13 @@ nav a:hover{
 }
 
 .page h1{
-    color:#6a0dad;
+    font-family:'Playfair Display', serif;
+    color:#ff5c93;
     margin-bottom:30px;
-    font-size:2.5rem;
+    font-size:2.8rem;
 }
 
-/* Our Product */
+/* PRODUK */
 
 .produk-kosong{
     font-size:1.2rem;
@@ -168,31 +191,33 @@ nav a:hover{
     display:flex;
     align-items:center;
     justify-content:center;
+    border-radius:20px;
     background:linear-gradient(
         135deg,
-        rgba(255,215,0,0.2),
-        rgba(106,13,173,0.1)
+        rgba(255,143,177,0.2),
+        rgba(255,255,255,0.8)
     );
 }
 
-/* IFRAME CANVA */
+/* IFRAME */
 
 iframe{
-    border-radius:15px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(255,143,177,0.2);
 }
 
-/* LINK CANVA */
+/* LINK */
 
 a{
-    color:#6a0dad;
+    color:#ff5c93;
     font-weight:600;
 }
 
 a:hover{
-    color:#b8860b;
+    color:#d63384;
 }
 
-/* ANIMASI */
+/* ANIMATION */
 
 @keyframes fadeDown{
     from{
@@ -203,12 +228,6 @@ a:hover{
         opacity:1;
         transform:translateY(0);
     }
-}
-
-/* SCROLL ANIMATION */
-
-.card{
-    animation:fadeUp 1s ease;
 }
 
 @keyframes fadeUp{
@@ -237,10 +256,14 @@ a:hover{
     }
 
     .hero h1{
-        font-size:2.3rem;
+        font-size:2.7rem;
     }
 
     .page h1{
-        font-size:2rem;
+        font-size:2.1rem;
+    }
+
+    .logo{
+        font-size:1.8rem;
     }
 }
