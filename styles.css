@@ -15,27 +15,7 @@ body{
     overflow-x:hidden;
 }
 
-/* DEKORASI */
 
-body::before{
-    content:"🌸";
-    position:fixed;
-    top:10%;
-    left:5%;
-    font-size:60px;
-    opacity:0.15;
-    z-index:-1;
-}
-
-body::after{
-    content:"🦋";
-    position:fixed;
-    bottom:10%;
-    right:5%;
-    font-size:60px;
-    opacity:0.15;
-    z-index:-1;
-}
 
 /* NAVBAR */
 
